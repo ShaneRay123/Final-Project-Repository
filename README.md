@@ -32,6 +32,8 @@ Click Choose File and navigate to: C:\xampp\htdocs\group_4-Buarao-Guilingen-Bost
 Click Go at the bottom.
 
 **Phase 4: Update the Connection File**
+
+
 Because your folder name is different from the one originally mentioned in the "Access" instructions, you must ensure the PHP code points to the right database.
 
 Open your project folder.
@@ -48,6 +50,8 @@ $password = ""; // XAMPP default is empty
 $dbname = "if0_40312270_db_userdata";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+
 **Phase 5: Access the Project**
 To view your website, you will now use this specific local URL:
 

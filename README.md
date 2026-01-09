@@ -1,65 +1,54 @@
 **Here is your detailed guide to getting the Student Wellness Hub running on your machine.**
 
-**Phase 1: Prepare the Environment**
-Launch XAMPP: Open the XAMPP Control Panel.
+**1. Launch XAMPP**
+Open the XAMPP Control Panel.
 
-Start Services: Click "Start" for Apache and MySQL.
+Click Start for Apache and MySQL.
 
-**Phase 2: Folder Setup**
-Open your file explorer and go to C:\xampp\htdocs.
+**2. Create the Database in phpMyAdmin**
+The name must match exactly for the project to work:
 
-Ensure your project folder is named exactly: group_4-Buarao-Guilingen-Boston-Zamora.
+Go to http://localhost/phpmyadmin/.
 
-Inside that folder, you should see your files (e.g., index.php, database.sql, etc.).
+Click the "New" tab in the top left corner.
 
-**Phase 3: Database Import (phpMyAdmin)**
-Open your browser and go to http://localhost/phpmyadmin/.
-
-Create Database: * Click New on the left.
-
-Enter name: if0_40312270_db_userdata (This must match what is in your PHP code).
+Under Database name, type: if0_40312270_db_userdata
 
 Click Create.
 
-Import Data:
+**3. Import Your Data**
+On the left-hand list, click on the database you just created (if0_40312270_db_userdata).
 
-Click the database name you just created.
+Click the "Import" tab at the top.
 
-Click the Import tab.
+Click Choose File and select your database.sql file (located inside your group_4-Buarao-Guilingen-Boston-Zamora folder).
 
-Click Choose File and navigate to: C:\xampp\htdocs\group_4-Buarao-Guilingen-Boston-Zamora\database.sql
+Scroll to the bottom and click Import (or Go).
 
-Click Go at the bottom.
+You should see a green success message saying "Import has been successfully finished."
 
-**Phase 4: Update the Connection File**
+**4. Verify Your Folder Path**
+Ensure your files are placed correctly so the URL works. Your path should look like this: C:\xampp\htdocs\group_4-Buarao-Guilingen-Boston-Zamora\index.php
 
+**5. Open Your Project**
+Now, open your web browser and go to:
 
-Because your folder name is different from the one originally mentioned in the "Access" instructions, you must ensure the PHP code points to the right database.
+http://localhost/group_4-Buarao-Guilingen-Boston-Zamora/
 
-Open your project folder.
+**6. Log In**
+Use the default credentials from your project info:
 
-Search for a file named db_connect.php, connection.php, or config.php.
+Admin/Counselor Email: admin2@gmail.com
 
-Open it in a text editor (like Notepad++ or VS Code) and ensure it looks like this:
+Password: Admin123
+
+Register code for admin: SWHub2025
+
+**Common Fix: If you get a "Connection Error" Check the file named db_connect.php or config.php in your folder. Make sure it looks like this:**
 
 PHP
 
 $servername = "localhost";
 $username = "root";
-$password = ""; // XAMPP default is empty
+$password = ""; // Leave blank for XAMPP
 $dbname = "if0_40312270_db_userdata";
-
-$conn = mysqli_connect($servername, $username, $password, $dbname);
-
-
-**Phase 5: Access the Project**
-To view your website, you will now use this specific local URL:
-
-URL: http://localhost/group_4-Buarao-Guilingen-Boston-Zamora/
-
-Admin Credentials
-Username: admin2@gmail.com
-
-Password: Admin123
-
-Registration Code: SWHub2025
